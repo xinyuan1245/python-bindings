@@ -1,0 +1,6 @@
+# 忽略生成的文件和文件夹
+__pycache__/
+*.o
+*.so
+*.cpp
+!pybind11.cpp

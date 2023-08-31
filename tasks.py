@@ -21,7 +21,7 @@ def build_pybind11(ctx):
 def build_cython(c):
     c.run("python setup.py build_ext --inplace")
 
-@task(build_cython,build_pybind11,build_pythoncapi)
+@task(build_test_c,build_cython,build_pybind11,build_pythoncapi)
 def compare(c):
     print("this is ctypes_results")
     c.run("python ctypes_test.py")
